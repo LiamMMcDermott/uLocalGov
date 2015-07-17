@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Umbraco.Core;
+@using Umbraco.Core.Models;
+@using Umbraco.Core.Services;
+@using System.Linq;
+@using umbraco.cms.businesslogic.member;
+@if (User.Identity.IsAuthenticated)
+{
+      var member = Member.GetCurrentMember();
+    //var member = ApplicationContext.Services.MemberService.GetByUsername(User.Identity.Name);
+    int memberID = member.Id;
+    
+    try 
+    {
+        IPublishedContent node = Umbraco.TypedContent(1155);
+        foreach (var v in node.Children)
+        {
+            if (v.GetProperty("memberId") == memberID.ToString())
+            {
+                if(v.Down(1).Children().Count() > 0)
+                { 
+                    foreach (var service in v.Down(1).Children())
+                    {
+                        <p>@service.Name</p>
+                        @*<a href="@(library.NiceUrl((service.Id)))?recordGUID=11111111-1111-1111-1111-111111111111">Edit</a><br />*@
+                    }
+                }
+                else
+                {
+                    <p>No Services Found</p>
+                }
+            }
+        }
+    }
+    catch(Exception e)
+    {
+               
+    }
+    
+    
+
+}
+else
+{
+    <p>You need to <a href="/login">login</a> to view your services</p>
+}

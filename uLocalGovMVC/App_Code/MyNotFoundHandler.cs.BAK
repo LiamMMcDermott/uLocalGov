@@ -1,0 +1,36 @@
+﻿using System.Web;
+using umbraco.interfaces;
+
+namespace MyLibrary.Handlers
+{
+    public class MyNotFoundHandler : INotFoundHandler
+    {
+        private int redirectId;
+
+        public bool Execute(string url)
+        {
+            //var server = HttpContext.Current.Request.ServerVariables["SERVER_NAME"].ToLower();
+            //if (server == "http://www.mreh200.org.uk/")
+            //{
+            //    redirectId = 11925; // the id of the 404 and search page from domain1.com
+            //    return true;
+            //}
+            //if (server == "http://www.cmft.nhs.uk")
+            //{
+            //    redirectId = 1032; // the id of the 404 and search page from domain2.com
+            //    return true;
+            //}
+            //return false;
+        }
+
+        public bool CacheUrl
+        {
+            get { return false; }
+        }
+
+        public int redirectID
+        {
+            get { return redirectId; }
+        }
+    }
+}
