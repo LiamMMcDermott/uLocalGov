@@ -2411,6 +2411,7 @@
     <None Include="App_Code\MyNotFoundHandler.cs.BAK" />
     <Content Include="MacroScripts\cisNoCaptcha.cshtml" />
     <Content Include="Views\MacroPartials\MemberLogin.cshtml" />
+    <Content Include="Views\Partials\ulgServiceAlert.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

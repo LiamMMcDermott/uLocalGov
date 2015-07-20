@@ -36,6 +36,14 @@
     <key alias="update">Update</key>
     <key alias="checkIn" version="4.0">Check In</key>
     <key alias="checkOut" version="4.0">Check Out</key>
+    <key alias="checkIn" version="4.0">Check In</key>
+    <key alias="checkOut" version="4.0">Check Out</key>
+    <key alias="contour" version="4.0">Umbraco Contour</key>
+    <key alias="exportContourForm">Export form</key>
+    <key alias="importContourForm">Import form</key>
+    <key alias="archiveContourForm">Archive form</key>
+    <key alias="unarchiveContourForm">Unarchive form</key>
+    <key alias="defaultValue">Default value</key>
   </area>
   <area alias="assignDomain">
     <key alias="permissionDenied">Permission denied.</key>
@@ -667,6 +675,7 @@ To manage your website, simply open the umbraco back office and start adding con
     <key alias="translation">Translation</key>
     <key alias="users">Users</key>
     <key alias="custom">Custom Section</key>
+    <key alias="contour" version="4.0">Umbraco Contour</key>
   </area>
   <area alias="settings">
     <key alias="defaulttemplate">Default template</key>

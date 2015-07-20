@@ -27,15 +27,17 @@ namespace uLocalGovMVC.Controllers.SurfaceControllers
             SortedDictionary<string, string> azPages = HttpRuntime.Cache["AZPages"] as SortedDictionary<string, string>;
 
             //If cache is null, build the a-z from scratch
-            if (azPages == null)
+            if (azPages == null || azPages.Count == 0)
             {
 
                 azPages = new SortedDictionary<string, string>();
                 //perhaps read these from configuration
+
+
                 string[] docTypeAliasToIncludeInAZ = new string[] { "ulgContentPage", "ulgLandingPage" };
 
                 IPublishedContent root = Umbraco.TypedContentAtRoot().First();
-                var sitePages = root.Descendants().Where(x => x.IsVisible() && docTypeAliasToIncludeInAZ.Contains(x.DocumentTypeAlias) && x.GetPropertyValue<bool>("inAtoZ"));
+                var sitePages = root.Descendants().Where(x => x.IsVisible() && docTypeAliasToIncludeInAZ.Contains(x.DocumentTypeAlias) && !x.GetPropertyValue<bool>("hideFromAZ"));
 
                 foreach (IPublishedContent page in sitePages)
                 {
