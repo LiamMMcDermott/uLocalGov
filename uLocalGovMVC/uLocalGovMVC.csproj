@@ -279,7 +279,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\NoCaptcha.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -2330,6 +2329,7 @@
     <Content Include="Views\Partials\ulgMegaMenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="App_Plugins\" />
     <Folder Include="Css\" />
@@ -2410,7 +2410,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Code\MyNotFoundHandler.cs.BAK" />
     <Content Include="MacroScripts\cisNoCaptcha.cshtml" />
     <Content Include="Views\MacroPartials\MemberLogin.cshtml" />
     <Content Include="Views\Partials\ulgServiceAlert.cshtml" />
