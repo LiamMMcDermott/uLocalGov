@@ -3,15 +3,15 @@
 @inherits umbraco.MacroEngines.DynamicNodeContext
 @{
 
-    NoCaptcha n = new NoCaptcha();
-    bool valid = n.Validate();
+    //NoCaptcha n = new NoCaptcha();
+    //bool valid = n.Validate();
 }
 <form id="" method="post" action="cisNoCaptcha">
 <div class="g-recaptcha" data-sitekey="6LdAnwITAAAAAHohxVPO17TjKgcUGjcO2gmk5-qT"></div>
             <div class="recaptcha-error-message">Please verify that you are not a robot.</div>
 <input type="submit" />
 </form>
-<h1>@valid</h1>
+<h1>valid</h1>
 <script src='https://www.google.com/recaptcha/api.js'></script>
     <script type="text/javascript">
         $('.recaptcha-error-message').hide();

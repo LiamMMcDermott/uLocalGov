@@ -15,11 +15,11 @@
     <AssemblyName>uLocalGovMVC</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44300</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -279,7 +279,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\NoCaptcha.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -2271,7 +2270,9 @@
     <Content Include="Views\Shared\Error.cshtml">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -2328,6 +2329,7 @@
     <Content Include="Views\Partials\ulgMegaMenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="App_Plugins\" />
     <Folder Include="Css\" />
@@ -2408,7 +2410,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Code\MyNotFoundHandler.cs.BAK" />
     <Content Include="MacroScripts\cisNoCaptcha.cshtml" />
     <Content Include="Views\MacroPartials\MemberLogin.cshtml" />
     <Content Include="Views\Partials\ulgServiceAlert.cshtml" />
@@ -2429,9 +2430,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>64145</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://dev-liam2.useconnect.co.uk/</IISUrl>
+          <IISUrl>http://localhost:64145/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
