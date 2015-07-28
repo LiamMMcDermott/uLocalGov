@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="data.aspx.cs" Inherits="Umbraco.Concierge.plugins.Concierge.chart.data" %>
